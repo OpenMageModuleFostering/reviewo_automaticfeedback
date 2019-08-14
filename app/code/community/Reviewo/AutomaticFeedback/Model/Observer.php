@@ -89,7 +89,7 @@ class Reviewo_AutomaticFeedback_Model_Observer
     /**
      * Send the specified order to the orders endpoint
      *
-     * returns the reviewo order id of the created object if successful
+     * returns the Reviewo order ID of the created object if successful
      * returns null if unsuccessful
      *
      * @param $order Mage_Sales_Model_Order
@@ -103,9 +103,8 @@ class Reviewo_AutomaticFeedback_Model_Observer
                 'reference' => $order->getIncrementId(),
                 'name' => $order->getCustomerName(),
                 'email' => $order->getCustomerEmail(),
-                'purchased_at' => substr($order->getCreatedAtDate()->getIso(), 0, -6),
+                'purchased_at' => substr($order->getCreatedAtDate()->setTimeZone('UTC')->getIso(), 0, -6) . "Z",
             )), "application/json;charset=UTF-8");
-
         try {
             $response = $client->request();
         } catch (Exception $e) {
@@ -127,9 +126,9 @@ class Reviewo_AutomaticFeedback_Model_Observer
     }
 
     /**
-     * Attempts to get the reviewo order id for a given order instance
+     * Attempts to get the Reviewo order ID for a given order instance
      *
-     * returns the reviewo order id of the order instance if found
+     * returns the Reviewo order ID of the order instance if found
      * returns null if unsuccessful
      *
      * @param $order Mage_Sales_Model_Order
@@ -172,7 +171,9 @@ class Reviewo_AutomaticFeedback_Model_Observer
         if (!$this->getConfigData('active')) { return; }
 
         $orders = Mage::getResourceModel('sales/order_collection')
-            ->addFieldToFilter('reviewo_id', array('null' => true));
+            ->addFieldToFilter('reviewo_id', array('null' => true))
+            ->setPageSize($this->getConfigData('limit'))
+            ->setCurPage(1);
 
         foreach($orders as $order) {
             $orderId = $this->fetchOrder($order);

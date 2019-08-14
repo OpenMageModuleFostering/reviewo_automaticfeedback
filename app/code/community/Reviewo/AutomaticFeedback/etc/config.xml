@@ -25,7 +25,7 @@
 <config>
     <modules>
         <Reviewo_AutomaticFeedback>
-            <version>1.1.0</version>
+            <version>1.2.0</version>
         </Reviewo_AutomaticFeedback>
     </modules>
     <global>
@@ -53,6 +53,7 @@
             <reviewo_automaticfeedback>
                 <active>0</active>
                 <frequency>15 * * * *</frequency>
+                <limit>250</limit>
             </reviewo_automaticfeedback>
         </sales>
     </default>

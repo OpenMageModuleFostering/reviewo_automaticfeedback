@@ -17,34 +17,34 @@
         <required>
             <php>
                 <min>5.3.0</min>
-                <max>5.6.0</max>
+                <max>6.0.0</max>
             </php>
             <package>
                 <name>Mage_Core_Modules</name>
                 <channel>community</channel>
-                <min>1.6.0.0</min>
-                <max>1.9.0.0</max>
+                <min>1.7.0.0</min>
+                <max>2.0.0.0</max>
             </package>
         </required>
     </dependencies>
     <name>Reviewo_AutomaticFeedback</name>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <stability>stable</stability>
     <channel>community</channel>
-    <date>2014-03-20</date>
+    <date>2014-07-21</date>
     <contents>
         <target name="magecommunity">
             <dir name="Reviewo">
                 <dir name="AutomaticFeedback">
                     <dir name="etc">
-                        <file hash="204847c1d3a5a7fde3779633e09f011b" name="config.xml"/>
-                        <file hash="f9a93298bc45f40445e6ecc308e7aa8b" name="system.xml"/>
+                        <file hash="4f9bf7377db8fe28b7006212f3ea263a" name="config.xml"/>
+                        <file hash="f357c3892558820734b88746da73a987" name="system.xml"/>
                     </dir>
                     <dir name="Helper">
                         <file hash="a6e7cba17211a206a71d549721ffc283" name="Data.php"/>
                     </dir>
                     <dir name="Model">
-                        <file hash="8867cc438bff84b37648ae6ceae80f6d" name="Observer.php"/>
+                        <file hash="12fcc474a17b417a5dd36409423ae928" name="Observer.php"/>
                         <dir name="Resource">
                             <file hash="ad876a1ae340042a1bee75c4621e165c" name="Setup.php"/>
                         </dir>
