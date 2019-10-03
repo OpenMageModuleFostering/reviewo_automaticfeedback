@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Reviewo_AutomaticFeedback",
+    "name": "openmage-module-fostering\/reviewo_automaticfeedback",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL-3.0)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Reviewo Automatic Feedback",
     "authors": [
