@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Reviewo_AutomaticFeedback",
+    "name": "OpenMageModuleFostering\/Reviewo_AutomaticFeedback",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL-3.0)",
     "homepage": "",
     "description": "Reviewo Automatic Feedback",
     "authors": [
-    {
-        "name": "Leon Smith",
-        "email": "leon@reviewo.com"
-    }
-],
+        {
+            "name": "Leon Smith",
+            "email": "leon@reviewo.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
